@@ -1,8 +1,63 @@
 /* 課題に関するコードを以下に書く */
-const welcome = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: "こんにちは！ この課題は何かキーボードのキーをタイプするとデータを保存して終わります。"
+const trial = {
+  type: jsPsychSurvey,
+  pages: [
+    [
+      {
+        type: 'likert',
+        prompt: 'I like to eat vegetables.',
+        likert_scale_min_label: '全く同意しない',
+        likert_scale_max_label: '強く同意する',
+        likert_scale_values: [
+          {value: 1},
+          {value: 2},
+          {value: 3},
+          {value: 4},
+          {value: 5}
+        ]
+      }, 
+      {
+        type: 'likert',
+        prompt: 'I like to eat fruit.',
+        likert_scale_min_label: 'Strongly Disagree',
+        likert_scale_max_label: 'Strongly Agree',
+        likert_scale_values: [
+          {value: 1},
+          {value: 2},
+          {value: 3},
+          {value: 4},
+          {value: 5}
+        ]
+      },
+      {
+        type: 'likert',
+        prompt: 'I like to eat meat.',
+        likert_scale_min_label: 'Strongly Disagree',
+        likert_scale_max_label: 'Strongly Agree',
+        likert_scale_values: [
+          {value: 1},
+          {value: 2},
+          {value: 3},
+          {value: 4},
+          {value: 5}
+        ]
+      },  
+
+    ],
+    [
+      {
+        type: 'likert-table',
+        prompt: ' ',
+        statements: [
+          {prompt: 'I like to eat vegetables', name: 'VeggiesTable'},
+          {prompt: 'I like to eat fruit', name: 'FruitTable'},
+          {prompt: 'I like to eat meat', name: 'MeatTable'},
+        ],
+        options: ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree'],
+      }
+    ]
+  ],
 };
 
 /*タイムラインの設定*/
-const timeline = [fullscreen,welcome];
+const timeline = [trial];
