@@ -10,7 +10,7 @@ const instruction2 = {
 const choice = {
   timeline:[{
     type: jsPsychHtmlButtonResponse,
-    stimulus: "<p style='position: fixed; top: 10%;left: 10%'><img src='smartphon/stimuli/slot.png' width='80%'/></p>",
+    stimulus: "<p style='position: absolute; top: 10%;left: 10%'><img src='smartphon/stimuli/slot.png' width='80%'/></p>",
     choices: ['左','右']
   },{
     type: jsPsychHtmlButtonResponse,
@@ -19,13 +19,13 @@ const choice = {
       var last_select = jsPsych.data.get().last(1).values()[0].response;
       var fb = jsPsych.timelineVariable('fb_slot1');
       if (last_select==0 && fb==1){
-        return ["<p style='position: fixed; top: 10%;left: 15%'><img src='smartphon/stimuli/gain.gif' width='60%'/></p>"]
+        return ["<p style='position: absolute; top: 10%;left: 15%'><img src='smartphon/stimuli/gain.gif' width='60%'/></p>"]
       } else if (last_select==0 && fb==0){
-        return ["<p style='position: fixed; top: 10%;left: 15%'><img src='smartphon/stimuli/loss.gif' width='60%'/></p>"]
+        return ["<p style='position: absolute; top: 10%;left: 15%'><img src='smartphon/stimuli/loss.gif' width='60%'/></p>"]
       } else if (last_select==1 && fb==0){
-        return ["<p style='position: fixed; top: 10%;left: 15%'><img src='smartphon/stimuli/gain.gif' width='60%'/></p>"]
+        return ["<p style='position: absolute; top: 10%;left: 15%'><img src='smartphon/stimuli/gain.gif' width='60%'/></p>"]
       } else if (last_select==1 && fb==1){
-        return ["<p style='position: fixed; top: 10%;left: 15%'><img src='smartphon/stimuli/loss.gif' width='60%'/></p>"]
+        return ["<p style='position: absolute; top: 10%;left: 15%'><img src='smartphon/stimuli/loss.gif' width='60%'/></p>"]
       }
     },
     button_html: '%choice%',
