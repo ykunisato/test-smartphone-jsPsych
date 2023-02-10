@@ -2,14 +2,14 @@
 
 const instruction1 = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: '<p style="text-align: left">これから行う課題は，スマートホンを横向きにして行います。</p>' + '<p style="text-align: left">イラストの様にスマートホンを横向きにしてください</p>' +'<p style="text-align: left"></p>' + '<p > <div style="position: fixed; top: 50%; left: 50%"><img src="smartphon/stimuli/smartphone_yoko.png" width="20%"/></div></p>',
+  stimulus: '<p style="text-align: left">これから行う課題はスマートホンを横向きにして行います。</p>' + '<p style="text-align: left">イラストの様にスマートホンを横向きにしてください。</p>' + '<p> <img src="smartphon/stimuli/smartphone_yoko.png" width="20%"/></p>',
   choices: ['スマートホンを横向にしたので次へ進む'],
   prompt: ""
 };
 
 const instruction2 = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: '<p style="text-align: left"> これから画面に２つのスロットマシーンが出てきますので，どちらかを選んでください。</p>' + '<p style="text-align: left">スロットマシーンを選択すると，賞金が得るか失います（なお賞金に羽が生えた絵は賞金を失ったことを意味します）。</p>' + '<p style="text-align: left"> スロットマシーンはどちらかが賞金が出やすいように設定されているので，より多くの賞金を得られる方を選択してください。</p>',
+  stimulus: '<p style="text-align: left"> 画面に２つのスロットマシーンが出てきますので，どちらかを選んでください。スロットマシーンを選択すると，賞金が得るか失います。スロットマシーンのどちらかの方が賞金が出やすいように設定されているので，より多くの賞金を得られる方を選択してください。</p>',
   choices: ['はじめる'],
   prompt: ""
 };
@@ -18,8 +18,8 @@ const choice = {
   timeline:[{
     type: jsPsychHtmlButtonResponse,
     stimulus: '',
-    choices: ['<div style="position: fixed; top: 50%; left: 0%"><img src="smartphon/stimuli/slot1.png" width="20%"/></div>',
-    '<div style="position: fixed; top: 50%; right: 0%"><img src="smartphon/stimuli/slot2.png" width="20%"/></div>'],
+    choices: ['<div style="position: fixed; top: 40%; left: 0%"><img src="smartphon/stimuli/slot1.png" width="20%"/></div>',
+    '<div style="position: fixed; top: 40%; right: 0%"><img src="smartphon/stimuli/slot2.png" width="20%"/></div>'],
     button_html: '%choice%'
   },{
     type: jsPsychHtmlButtonResponse,
@@ -28,13 +28,13 @@ const choice = {
       var last_select = jsPsych.data.get().last(1).values()[0].response;
       var fb = jsPsych.timelineVariable('fb_slot1');
       if (last_select==0 && fb==1){
-        return ["<p style='position: fixed; top: 40%;left: 20%'><img src='smartphon/stimuli/gain.gif' width='30%'/></p>"]
+        return ["<p style='position: fixed; top: 30%;left: 15%'><img src='smartphon/stimuli/gain.gif' width='30%'/></p>"]
       } else if (last_select==0 && fb==0){
-        return ["<p style='position: fixed; top: 40%;left: 20%'><img src='smartphon/stimuli/loss.gif' width='30%'/></p>"]
+        return ["<p style='position: fixed; top: 30%;left: 15%'><img src='smartphon/stimuli/loss.gif' width='30%'/></p>"]
       } else if (last_select==1 && fb==0){
-        return ["<p style='position: fixed; top: 40%;left: 20%'><img src='smartphon/stimuli/gain.gif' width='30%'/></p>"]
+        return ["<p style='position: fixed; top: 30%;left: 15%'><img src='smartphon/stimuli/gain.gif' width='30%'/></p>"]
       } else if (last_select==1 && fb==1){
-        return ["<p style='position: fixed; top: 40%;left: 20%'><img src='smartphon/stimuli/loss.gif' width='30%'/></p>"]
+        return ["<p style='position: fixed; top: 30%;left: 15%'><img src='smartphon/stimuli/loss.gif' width='30%'/></p>"]
       }
     },
     button_html: '%choice%',
