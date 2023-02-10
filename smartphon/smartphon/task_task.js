@@ -2,7 +2,7 @@
 
 const instruction1 = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: '<p style="text-align: left">これから行う課題はスマートホンを横向きにして行います。</p>' + '<p style="text-align: left">イラストの様にスマートホンを横向きにしてください。</p>' + '<p> <img src="smartphon/stimuli/smartphone_yoko.png" width="20%"/></p>',
+  stimulus: '<p style="text-align: left">これから行う課題はスマートホンを横向きにしておこないます。イラストの様にスマートホンを横向きにしてください。</p>' + '<p> <img src="smartphon/stimuli/smartphone_yoko.png" width="20%"/></p>',
   choices: ['スマートホンを横向にしたので次へ進む'],
   prompt: ""
 };
@@ -17,7 +17,7 @@ const instruction2 = {
 const choice = {
   timeline:[{
     type: jsPsychHtmlButtonResponse,
-    stimulus: "<p style='position: fixed; top: 0%;left: 30%'><img src='smartphon/stimuli/slot.png' width='60%'/></p>",
+    stimulus: "<p style='position: fixed; top: 0%;left: 15%'><img src='smartphon/stimuli/slot.png' width='30%'/></p>",
     choices: ['左','右']
   },{
     type: jsPsychHtmlButtonResponse,
