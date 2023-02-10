@@ -17,10 +17,8 @@ const instruction2 = {
 const choice = {
   timeline:[{
     type: jsPsychHtmlButtonResponse,
-    stimulus: '',
-    choices: ['<div style="position: fixed; top: 40%; left: 0%"><img src="smartphon/stimuli/slot1.png" width="20%"/></div>',
-    '<div style="position: fixed; top: 40%; right: 0%"><img src="smartphon/stimuli/slot2.png" width="20%"/></div>'],
-    button_html: '%choice%'
+    stimulus: "<p style='position: fixed; top: 0%;left: 30%'><img src='smartphon/stimuli/slot.png' width='60%'/></p>",
+    choices: ['左','右']
   },{
     type: jsPsychHtmlButtonResponse,
     stimulus: '',
