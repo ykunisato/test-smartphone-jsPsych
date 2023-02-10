@@ -1,34 +1,22 @@
-var trial = {
-  type: jsPsychSurvey,
-  pages: [
-    [
-      {
-        type: 'html',
-        prompt: 'この質問紙はあなたの心理学に対する感情を測定するものです。<br> 以下の項目をよく読んで，あなた自身にどのくらい当てはまるか，当てはまるものを選んでください',
-      },
-      {
-        type: 'multi-choice',
-        prompt: "心理学のことが好きだ", 
-        name: 'VegetablesLike', 
-        options: ['全く違うと思う','おおよそ違うと思う','少し違うと思う','どちらでもない','少しそう思う','まあまあそう思う','強くそう思う'], 
-        required: true
-      }, 
-      {
-        type: 'multi-choice',
-        prompt: "心理学のことを一日中考えている", 
-        name: 'FruitLike', 
-        options: ['全く違うと思う','おおよそ違うと思う','少し違うと思う','どちらでもない','少しそう思う','まあまあそう思う','強くそう思う'],  
-        required: false,
-      }, 
-      {
-        type: 'multi-choice',
-        prompt: "私は心理学のために尽くすタイプだ", 
-        name: 'FruitLike', 
-        options: ['全く違うと思う','おおよそ違うと思う','少し違うと思う','どちらでもない','少しそう思う','まあまあそう思う','強くそう思う'],  
-        required: false,
-      }
-    ]
+var likert_scale = [
+  "全く当てはまらない", 
+  "当てはまらない", 
+  "どちらでもない", 
+  "当てはまる", 
+  "とてもよく当てはまる"
+];
+
+var questionnaire = {
+  type: jsPsychSurveyLikert,
+  questions: [
+    {prompt: "私は不安を感じている", name: 'anxiety', labels: likert_scale},
+    {prompt: "私は憂うつに感じている", name: 'depression', labels: likert_scale},
+    {prompt: "私はイライラしている", name: 'irritated', labels: likert_scale},
+    {prompt: "私は楽しいと感じている", name: 'joy', labels: likert_scale},
+    {prompt: "私はリラックスしている", name: 'relax', labels: likert_scale},
   ],
+  randomize_question_order: true,
+  button_label : "次へ"
 };
 /*タイムラインの設定*/
-const timeline = [trial]
+const timeline = [questionnaire]
