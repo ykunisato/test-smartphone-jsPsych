@@ -10,8 +10,8 @@ const choice = {
   timeline:[{
     type: jsPsychHtmlButtonResponse,
     stimulus: '',
-    choices: ['<div style="position: absolute; top: 50%; left: 0%"><img src="smartphon/stimuli/slot1.png" width="20%"/></div>',
-    '<div style="position: absolute; top: 50%; left: 50%"><img src="smartphon/stimuli/slot2.png" width="20%"/></div>'],
+    choices: ['<div style="position: fixed; top: 50%; left: 0%"><img src="smartphon/stimuli/slot1.png" width="20%"/></div>',
+    '<div style="position: fixed; top: 50%; right: 0%"><img src="smartphon/stimuli/slot2.png" width="20%"/></div>'],
     button_html: '%choice%'
   },{
     type: jsPsychHtmlButtonResponse,
