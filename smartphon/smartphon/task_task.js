@@ -1,12 +1,5 @@
 /* 課題に関するコードを以下に書く */
 
-const instruction1 = {
-  type: jsPsychHtmlButtonResponse,
-  stimulus: '<p style="text-align: left">これから行う課題はスマートホンを横向きにしておこないます。イラストの様にスマートホンを横向きにしてください。</p>' + '<p> <img src="smartphon/stimuli/smartphone_yoko.png" width="20%"/></p>',
-  choices: ['スマートホンを横向にしたので次へ進む'],
-  prompt: ""
-};
-
 const instruction2 = {
   type: jsPsychHtmlButtonResponse,
   stimulus: '<p style="text-align: left"> 画面に２つのスロットマシーンが出てきますので，どちらかを選んでください。スロットマシーンを選択すると，賞金が得るか失います。スロットマシーンのどちらかの方が賞金が出やすいように設定されているので，より多くの賞金を得られる方を選択してください。</p>',
@@ -17,7 +10,7 @@ const instruction2 = {
 const choice = {
   timeline:[{
     type: jsPsychHtmlButtonResponse,
-    stimulus: "<p style='position: fixed; top: 0%;left: 15%'><img src='smartphon/stimuli/slot.png' width='30%'/></p>",
+    stimulus: "<p style='position: fixed; top: 0%;left: 15%'><img src='smartphon/stimuli/slot.png' width='50%'/></p>",
     choices: ['左','右']
   },{
     type: jsPsychHtmlButtonResponse,
@@ -63,4 +56,4 @@ const instruction_end = {
 };
 
 /*タイムラインの設定*/
-const timeline = [instruction1,instruction2,choice, instruction_end];
+const timeline = [instruction2,choice, instruction_end];
