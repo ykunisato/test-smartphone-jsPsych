@@ -10,8 +10,8 @@ const choice = {
   timeline:[{
     type: jsPsychHtmlButtonResponse,
     stimulus: '',
-    choices: ['<div style="position: absolute; top: 50%; left: 5%"><img src="smartphon/stimuli/slot1.png" width="40%"/></div>',
-    '<div style="position: absolute; top: 50%; right: 5%"><img src="smartphon/stimuli/slot2.png" width="40%"/></div>'],
+    choices: ['<div style="position: absolute; top: 50%; left: 5%"><img src="smartphon/stimuli/slot1.png" width="20%"/></div>',
+    '<div style="position: absolute; top: 50%; right: 5%"><img src="smartphon/stimuli/slot2.png" width="20%"/></div>'],
     button_html: '%choice%'
   },{
     type: jsPsychHtmlButtonResponse,
@@ -20,13 +20,13 @@ const choice = {
       var last_select = jsPsych.data.get().last(1).values()[0].response;
       var fb = jsPsych.timelineVariable('fb_slot1');
       if (last_select==0 && fb==1){
-        return ["<p style='position: absolute; top: 30%;left: 30%'><img src='smartphon/stimuli/gain.gif' width='50%'/></p>"]
+        return ["<p style='position: absolute; top: 40%;left: 20%'><img src='smartphon/stimuli/gain.gif' width='50%'/></p>"]
       } else if (last_select==0 && fb==0){
-        return ["<p style='position: absolute; top: 30%;left: 30%'><img src='smartphon/stimuli/loss.gif' width='50%'/></p>"]
+        return ["<p style='position: absolute; top: 40%;left: 20%'><img src='smartphon/stimuli/loss.gif' width='50%'/></p>"]
       } else if (last_select==1 && fb==0){
-        return ["<p style='position: absolute; top: 30%;left: 30%'><img src='smartphon/stimuli/gain.gif' width='50%'/></p>"]
+        return ["<p style='position: absolute; top: 40%;left: 20%'><img src='smartphon/stimuli/gain.gif' width='50%'/></p>"]
       } else if (last_select==1 && fb==1){
-        return ["<p style='position: absolute; top: 30%;left: 30%'><img src='smartphon/stimuli/loss.gif' width='50%'/></p>"]
+        return ["<p style='position: absolute; top: 40%;left: 20%'><img src='smartphon/stimuli/loss.gif' width='50%'/></p>"]
       }
     },
     button_html: '%choice%',
